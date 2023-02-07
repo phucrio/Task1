@@ -103,3 +103,22 @@ Challenge cho dãy số `268 413 110 190 426 419 108 229 310 379 323 373 385 236
  ![Screenshot_20230208_045842](https://user-images.githubusercontent.com/83689890/217376222-93de4064-8285-46e1-8ea0-512e0e71babe.png)
  
  Flag là `picoCTF{1NV3R53LY_H4RD_C680BDC1`
+ 
+ 
+ 
+ 
+ # morse-code 
+ Challenge cho một file WAV âm thanh mouse code 
+ 
+  Upload lên trang  `https://morsecode.world/international/decoder/audio-decoder-adaptive.html`
+  
+ ![Screenshot_20230208_050544](https://user-images.githubusercontent.com/83689890/217377417-4b73acf9-01f5-47dc-9b35-d76e133e80a7.png)
+ 
+ Flag là `picoCTF{WH47_H47H_90D_W20U9H7}`
+
+
+ 
+ 
+ 
+ 
+ 
