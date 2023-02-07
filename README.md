@@ -72,3 +72,16 @@ RC4 (Ron's Code 4) là một ví dụ của Stream Cipher. Nó sử dụng một
 `Hash Function` là một thuật toán mã hóa tính toán một giá trị băm (hash value) từ một đầu vào bất kỳ (thường là một chuỗi hoặc tập tin). Giá trị băm này là duy nhất cho mỗi đầu vào và có thể được sử dụng để xác định độ tin cậy của dữ liệu.
 
 Ví dụ, một Hash Function có thể được sử dụng để tạo ra một giá trị băm cho một password được lưu trữ trong một database. Khi người dùng nhập password để đăng nhập, Hash Function có thể được sử dụng để tạo ra giá trị băm cho password mới và so sánh nó với giá trị băm đã lưu trữ để xác định xem password có đúng hay không.
+
+# basic-mod1 
+```
+Challenge
+We found this weird message being passed around on the servers, we think we have a working decrpytion scheme. Download the message here. Take each number mod 37 and map it to the following character set: 0-25 is the alphabet (uppercase), 26-35 are the decimal digits, and 36 is an underscore. Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_message})
+```
+
+ Challenge cho dãy số `54 396 131 198 225 258 87 258 128 211 57 235 114 258 144 220 39 175 330 338 297 288 ` yêu cầu mod cho 37 và ánh xạ vào bảng chữ cái
+ 
+ ![Screenshot_20230208_045015](https://user-images.githubusercontent.com/83689890/217374767-921eb825-2a5e-44a7-a2ec-c82edbe951a7.png)
+
+Flag là `picoCTF{R0UND_N_R0UND_79C18FB3}`
+
