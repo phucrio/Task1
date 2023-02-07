@@ -35,3 +35,19 @@ Vậy, quá trình `Encrypt` và `Decrypt` giúp cho việc bảo vệ dữ li�
 VD:Bạn muốn gửi một tệp tin nhạy cảm cho một người bạn. Bạn có thể sử dụng giải thuật mã hóa AES để encrypt tệp tin của mình với một khóa mã hóa độc đáo. Kết quả là tệp tin được mã hóa thành một dạng mã hoá và không thể đọc được bởi người khác.
 
 Khi người nhận nhận được tệp tin, họ có thể sử dụng khóa giải mã tương ứng để decrypt tệp tin và nhận được tệp tin gốc của bạn.
+
+
+# Symmetric and Asymmetric Cryptography
+Symmetric và Asymmetric Cryptography là hai kiểu mã hóa khác nhau được sử dụng để bảo vệ thông tin.
+
+`Symmetric Cryptography` (Mã hóa đối xứng): Là kiểu mã hóa sử dụng cùng một khóa để mã hóa và giải mã dữ liệu. Vì vậy, cả hai bên phải giữ khóa mã hóa an toàn để tránh việc bị người khác tấn công.
+
+`Asymmetric Cryptography`(Mã hóa bất đối xứng): Là kiểu mã hóa sử dụng hai khóa khác nhau để mã hóa và giải mã dữ liệu. Một khóa được gọi là khóa công khai hoặc khóa mã hóa, còn khóa còn lại là khóa riêng hoặc khóa giải mã. Khi một người gửi thông tin đến người khác, họ sẽ sử dụng khóa công khai của người nhận để mã hóa thông tin. Nếu ai đó trộm được thông tin, họ sẽ không thể giải mã được vì chỉ có khóa riêng mới có thể giải mã thông tin.
+
+Ví dụ về Asymmetric Cryptography:
+
+Trong một trường hợp gửi email, người gửi sẽ sử dụng khóa công khai của người nhận để mã hóa nội dung email. Khi email đến, người nhận sẽ sử dụng khóa riêng của mình để giải mã và đọc nội dung email.
+
+Ví dụ về Symmetric Cryptography:
+
+Trong một trường hợp truyền tải dữ liệu trong một mạng, hai bên sẽ thỏa thuận sử dụng một khóa chung để mã hóa và giải mã dữ liệu. Khi dữ liệu được gửi từ máy A đến máy B, nội dung sẽ được mã hóa bằng khóa chung và chỉ có máy B mới có thể giải mã được dữ liệu.
