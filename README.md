@@ -102,10 +102,33 @@ Challenge cho dãy số `268 413 110 190 426 419 108 229 310 379 323 373 385 236
 
  ![Screenshot_20230208_045842](https://user-images.githubusercontent.com/83689890/217376222-93de4064-8285-46e1-8ea0-512e0e71babe.png)
  
- Flag là `picoCTF{1NV3R53LY_H4RD_C680BDC1`
+ Flag là `picoCTF{1NV3R53LY_H4RD_C680BDC1}`
  
+ # credstuff
+ ```
+ Description
+We found a leak of a blackmarket website's login credentials. Can you find the password of the user cultiris and successfully decrypt it?
+Download the leak here.
+The first user in usernames.txt corresponds to the first password in passwords.txt. The second user corresponds to the second password, and so on.
+```
+Challenge cũng cấp một file .tar giải nén ra được 2 file `usernames.txt` và `passwords.txt` .Chúng ta phải tìm user `cultiris`
+
+
+
+![Screenshot_20230208_053551](https://user-images.githubusercontent.com/83689890/217382414-ebd867d5-40d2-4d96-b34f-812650bf2dd4.png)
+
+Tìm thấy `cultiris` ở dòng 378 suy ra password cũng ở dòng 378 
+
+![image](https://user-images.githubusercontent.com/83689890/217382606-49a428a4-7c98-454f-9a67-ecf27368d7b5.png)
+
+ password : `cvpbPGS{P7e1S_54I35_71Z3}`
  
+ Vì chữ `c` cách chữ `p` trong định dạng flag là `picoCTF{` nên e đoán đây là mã ROT13
+ Giải bằng CyberChef 
  
+ ![image](https://user-images.githubusercontent.com/83689890/217383605-88da654e-1693-4b78-ad4b-1695254449d7.png)
+
+Flag là `picoCTF{C7r1F_54V35_71M3}`
  
  # morse-code 
  Challenge cho một file WAV âm thanh mouse code 
@@ -115,6 +138,23 @@ Challenge cho dãy số `268 413 110 190 426 419 108 229 310 379 323 373 385 236
  ![Screenshot_20230208_050544](https://user-images.githubusercontent.com/83689890/217377417-4b73acf9-01f5-47dc-9b35-d76e133e80a7.png)
  
  Flag là `picoCTF{WH47_H47H_90D_W20U9H7}`
+ 
+ 
+ # rail-fence
+ 
+ ```
+ Description
+A type of transposition cipher is the rail fence cipher, which is described here. Here is one such cipher encrypted using the rail fence with 4 rails. 
+Can you decrypt it?
+Download the message here.
+Put the decoded message in the picoCTF flag format, picoCTF{decoded_message}.
+```
+Challenge cho đoạn mã `Ta _7N6DDDhlg:W3D_H3C31N__0D3ef sHR053F38N43D0F i33___NA` 
+Dán vào trang `https://www.boxentriq.com/code-breaking/rail-fence-cipher`
+
+![image](https://user-images.githubusercontent.com/83689890/217384184-3eae0a5d-7b23-47b3-b89f-dba79a775716.png)
+
+Flag là `picoCTF{WH3R3_D035_7H3_F3NC3_8361N_4ND_3ND_D00AFDD3}`
 
 
  
