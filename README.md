@@ -81,9 +81,25 @@ Take each number mod 37 and map it to the following character set: 0-25 is the a
 Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_message})
 ```
 
- Challenge cho dãy số `54 396 131 198 225 258 87 258 128 211 57 235 114 258 144 220 39 175 330 338 297 288 ` yêu cầu mod cho 37 và ánh xạ vào bảng chữ cái
+ Challenge cho dãy số `54 396 131 198 225 258 87 258 128 211 57 235 114 258 144 220 39 175 330 338 297 288 ` yêu cầu mod cho 37 và ánh xạ vào bảng kí tự gồm chữ cái,số thập phân và dấu gạch dưới
  
  ![Screenshot_20230208_045015](https://user-images.githubusercontent.com/83689890/217374767-921eb825-2a5e-44a7-a2ec-c82edbe951a7.png)
 
 Flag là `picoCTF{R0UND_N_R0UND_79C18FB3}`
 
+
+# base-mod2
+```
+Challenge
+A new modular challenge! Download the message here. Take each number mod 41 and find the modular inverse for the result. 
+Then map to the following character set: 1-26 are the alphabet, 27-36 are the decimal digits, and 37 is an underscore. 
+Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_message})
+```
+
+Challenge cho dãy số `268 413 110 190 426 419 108 229 310 379 323 373 385 236 92 96 169 321 284 185 154 137 186  ` yêu cầu mod cho 41 tìm nghịch đảo và ánh xạ vào bảng kí tự gồm chữ cái,số thập phân và dấu gạch dưới
+
+
+
+ ![Screenshot_20230208_045842](https://user-images.githubusercontent.com/83689890/217376222-93de4064-8285-46e1-8ea0-512e0e71babe.png)
+ 
+ Flag là `picoCTF{1NV3R53LY_H4RD_C680BDC1`
