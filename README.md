@@ -21,3 +21,17 @@ VD:Bạn muốn gửi một tin nhắn bảo mật cho một người bạn vớ
 
 Khi người nhận nhận được tin nhắn, họ có thể sử dụng giải thuật giải mã Base64 để decode tin nhắn và nhận được tin nhắn gốc của bạn.
 Vậy, quá trình encode và decode giúp cho việc gửi và nhận tin nhắn bảo mật trở nên dễ dàng và an toàn hơn.
+
+# Encrypt/Decrypt 
+
+`Encrypt` và `Decrypt` là hai quá trình liên quan đến mã hóa và giải mã dữ liệu.
+
+`Encrypt` là quá trình mã hóa dữ liệu bằng cách sử dụng một khóa mã hóa để chuyển dữ liệu thông thường thành một chuỗi ký tự hoặc số đặc biệt và không thể đọc được bởi người khác nếu chưa có khóa giải mã tương ứng.
+
+VD:Bạn muốn gửi một tệp tin nhạy cảm cho một người bạn. Bạn có thể sử dụng giải thuật mã hóa AES để encrypt tệp tin của mình với một khóa mã hóa độc đáo. Kết quả là tệp tin được mã hóa thành một dạng mã hoá và không thể đọc được bởi người khác.
+
+Khi người nhận nhận được tệp tin, họ có thể sử dụng khóa giải mã tương ứng để decrypt tệp tin và nhận được tệp tin gốc của bạn.
+
+`Decrypt` là quá trình giải mã dữ liệu đã được mã hóa bằng cách sử dụng khóa giải mã tương ứng để trả lại dữ liệu gốc hoặc thông thường.
+
+Vậy, quá trình `Encrypt` và `Decrypt` giúp cho việc bảo vệ dữ liệu và giữ cho thông tin riêng tư của người dùng an toàn.
