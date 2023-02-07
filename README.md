@@ -51,3 +51,24 @@ Trong một trường hợp gửi email, người gửi sẽ sử dụng khóa c
 Ví dụ về Symmetric Cryptography:
 
 Trong một trường hợp truyền tải dữ liệu trong một mạng, hai bên sẽ thỏa thuận sử dụng một khóa chung để mã hóa và giải mã dữ liệu. Khi dữ liệu được gửi từ máy A đến máy B, nội dung sẽ được mã hóa bằng khóa chung và chỉ có máy B mới có thể giải mã được dữ liệu.
+
+# Block Cipher and Stream Cipher
+
+`Block Cipher` và `Stream Cipher` là hai kiểu mã hóa khác nhau trong cryptography.
+
+`Block Cipher`: là một kiểu mã hóa từng block dữ liệu một cách độc lập với những block khác. Mỗi block sẽ được mã hóa bằng cùng một khóa và các block sẽ được gửi đi một cách độc lập với nhau. Kích thước block thường là 128 hoặc 256 bits.
+
+`Stream Cipher`: là một kiểu mã hóa dữ liệu từng byte một. Nó sẽ tạo ra một dòng bit để mã hóa từng byte dữ liệu. Stream Cipher thường được sử dụng trong việc truyền tải dữ liệu trong một mạng vì nó có tốc độ mã hóa và giải mã nhanh hơn Block Cipher.
+
+Ví dụ về Block Cipher:
+
+AES (Advanced Encryption Standard) là một ví dụ của Block Cipher. Nó sử dụng một khóa để mã hóa từng block dữ liệu với kích thước block là 128 bits.
+Ví dụ về Stream Cipher:
+
+RC4 (Ron's Code 4) là một ví dụ của Stream Cipher. Nó sử dụng một khóa để tạo ra một dòng bit để mã hóa từng byte dữ liệu. RC4 thường được sử dụng trong việc truyền tải dữ liệu trong một mạng vì tốc độ mã hóa và giải mã nhanh.
+
+# Hash Function 
+
+`Hash Function` là một thuật toán mã hóa tính toán một giá trị băm (hash value) từ một đầu vào bất kỳ (thường là một chuỗi hoặc tập tin). Giá trị băm này là duy nhất cho mỗi đầu vào và có thể được sử dụng để xác định độ tin cậy của dữ liệu.
+
+Ví dụ, một Hash Function có thể được sử dụng để tạo ra một giá trị băm cho một password được lưu trữ trong một database. Khi người dùng nhập password để đăng nhập, Hash Function có thể được sử dụng để tạo ra giá trị băm cho password mới và so sánh nó với giá trị băm đã lưu trữ để xác định xem password có đúng hay không.
