@@ -28,10 +28,10 @@ Vậy, quá trình encode và decode giúp cho việc gửi và nhận tin nhắ
 
 `Encrypt` là quá trình mã hóa dữ liệu bằng cách sử dụng một khóa mã hóa để chuyển dữ liệu thông thường thành một chuỗi ký tự hoặc số đặc biệt và không thể đọc được bởi người khác nếu chưa có khóa giải mã tương ứng.
 
-VD:Bạn muốn gửi một tệp tin nhạy cảm cho một người bạn. Bạn có thể sử dụng giải thuật mã hóa AES để encrypt tệp tin của mình với một khóa mã hóa độc đáo. Kết quả là tệp tin được mã hóa thành một dạng mã hoá và không thể đọc được bởi người khác.
-
-Khi người nhận nhận được tệp tin, họ có thể sử dụng khóa giải mã tương ứng để decrypt tệp tin và nhận được tệp tin gốc của bạn.
-
 `Decrypt` là quá trình giải mã dữ liệu đã được mã hóa bằng cách sử dụng khóa giải mã tương ứng để trả lại dữ liệu gốc hoặc thông thường.
 
 Vậy, quá trình `Encrypt` và `Decrypt` giúp cho việc bảo vệ dữ liệu và giữ cho thông tin riêng tư của người dùng an toàn.
+
+VD:Bạn muốn gửi một tệp tin nhạy cảm cho một người bạn. Bạn có thể sử dụng giải thuật mã hóa AES để encrypt tệp tin của mình với một khóa mã hóa độc đáo. Kết quả là tệp tin được mã hóa thành một dạng mã hoá và không thể đọc được bởi người khác.
+
+Khi người nhận nhận được tệp tin, họ có thể sử dụng khóa giải mã tương ứng để decrypt tệp tin và nhận được tệp tin gốc của bạn.
