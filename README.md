@@ -10,6 +10,7 @@ VD: Bạn muốn gửi một email có nội dung bảo mật cho một người
 
 VD: Một tổ chức tấn công bảo mật muốn truy cập thông tin bảo mật trong một hệ thống. Họ có thể sử dụng kỹ thuật cryptanalysis để phân tích và giải mã giải thuật mã hóa để truy cập thông tin bảo mật.
 
+# Encode/Decode
 `Encode` và `Decode` là hai quá trình liên quan đến mã hóa và giải mã dữ liệu.
 
 `Encode` là quá trình chuyển đổi dữ liệu thông thường thành dữ liệu được mã hóa sử dụng một giải thuật mã hóa để bảo vệ quyền riêng tư hoặc tính bảo mật.
