@@ -150,11 +150,49 @@ Download the message here.
 Put the decoded message in the picoCTF flag format, picoCTF{decoded_message}.
 ```
 Challenge cho đoạn mã `Ta _7N6DDDhlg:W3D_H3C31N__0D3ef sHR053F38N43D0F i33___NA` 
+
 Dán vào trang `https://www.boxentriq.com/code-breaking/rail-fence-cipher`
 
 ![image](https://user-images.githubusercontent.com/83689890/217384184-3eae0a5d-7b23-47b3-b89f-dba79a775716.png)
 
 Flag là `picoCTF{WH3R3_D035_7H3_F3NC3_8361N_4ND_3ND_D00AFDD3}`
+
+
+# transposition-trial
+
+```
+Description
+Our data got corrupted on the way here. Luckily, nothing got replaced, but every block of 3 got scrambled around! 
+The first word seems to be three letters long, maybe you can use that to recover the rest of the message.
+Download the corrupted message here.
+```
+Challenge cho đoạn mã `heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V9AAB1F8}7`
+
+Thay dấu cách thay dấu gạch dưới và để ý một chút ta sẽ thấy quy luật của từng khối 3 kí tự
+![image](https://user-images.githubusercontent.com/83689890/217387688-1276d0e9-2085-4a3e-87df-0b634c197a4f.png)
+
+Mã hóa đổi hoán vị từ (1,2,3)->(2,3,1) để giải ta làm ngược lại (3,1,2)
+
+![image](https://user-images.githubusercontent.com/83689890/217388120-24d6931f-3891-4bc1-9c70-2e019aa954c8.png)
+
+Flag là `picoCTF{7R4N5P051N6_15_3XP3N51V3_A9AFB178}`
+
+
+
+# Vigenere
+```
+Description
+Can you decrypt this message?
+Decrypt this message using this key "CYLAB".
+```
+
+Challenge cho đoạn mã `rgnoDVD{O0NU_WQ3_G1G3O3T3_A1AH3S_2951c89f}` với key là `CYLAB`
+
+Giải bằng CyberChef
+
+![image](https://user-images.githubusercontent.com/83689890/217384824-4800d741-1a95-4c54-8a8a-e4283d4a5c8a.png)
+
+Flag là `picoCTF{D0NT_US3_V1G3N3R3_C1PH3R_2951a89h}`
 
 
  
