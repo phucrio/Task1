@@ -83,7 +83,7 @@ Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_m
 
  Challenge cho dãy số `54 396 131 198 225 258 87 258 128 211 57 235 114 258 144 220 39 175 330 338 297 288 ` yêu cầu mod cho 37 và ánh xạ vào bảng kí tự gồm chữ cái,số thập phân và dấu gạch dưới
  
- ```
+ ```python
  from string import ascii_uppercase
 x = [54, 396, 131, 198, 225, 258, 87, 258, 128, 211, 57,
      235, 114, 258, 144, 220, 39, 175, 330, 338, 297, 288]
@@ -110,7 +110,7 @@ Wrap your decrypted message in the picoCTF flag format (i.e. picoCTF{decrypted_m
 
 Challenge cho dãy số `268 413 110 190 426 419 108 229 310 379 323 373 385 236 92 96 169 321 284 185 154 137 186  ` yêu cầu mod cho 41 tìm nghịch đảo và ánh xạ vào bảng kí tự gồm chữ cái,số thập phân và dấu gạch dưới
 
-```
+```python
 from string import ascii_uppercase
 x = [268, 413, 110, 190, 426, 419, 108, 229, 310, 379, 323,
      373, 385, 236, 92, 96, 169, 321, 284, 185, 154, 137, 186]
@@ -196,7 +196,7 @@ Thay dấu cách thay dấu gạch dưới và để ý một chút ta sẽ th�
 
 Mã hóa đổi hoán vị từ (1,2,3)->(2,3,1) để giải ta làm ngược lại (3,1,2)
 
-```
+```python
 f = open("message.txt", "r", encoding="UTF-8")
 s = f.read()
 
