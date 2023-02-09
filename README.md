@@ -23,7 +23,7 @@ Khi người nhận nhận được tin nhắn, họ có thể sử dụng giả
 Vậy, quá trình encode và decode giúp cho việc gửi và nhận tin nhắn bảo mật trở nên dễ dàng và an toàn hơn.
 
 # Encrypt/Decrypt 
-
+## Khái niệm
 `Encrypt` và `Decrypt` là hai quá trình liên quan đến mã hóa và giải mã dữ liệu.
 
 `Encrypt` là quá trình mã hóa dữ liệu bằng cách sử dụng một khóa mã hóa để chuyển dữ liệu thông thường thành một chuỗi ký tự hoặc số đặc biệt và không thể đọc được bởi người khác nếu chưa có khóa giải mã tương ứng.
@@ -32,17 +32,38 @@ Vậy, quá trình encode và decode giúp cho việc gửi và nhận tin nhắ
 
 Vậy, quá trình `Encrypt` và `Decrypt` giúp cho việc bảo vệ dữ liệu và giữ cho thông tin riêng tư của người dùng an toàn.
 
-VD:Bạn muốn gửi một tệp tin nhạy cảm cho một người bạn. Bạn có thể sử dụng giải thuật mã hóa AES để encrypt tệp tin của mình với một khóa mã hóa độc đáo. Kết quả là tệp tin được mã hóa thành một dạng mã hoá và không thể đọc được bởi người khác.
+## Các thuật toán mã hóa phổ biến
+- AES
+- DES
+- TripleDES
+- RSA 
+- Twofish
+
+## Ví dụ
+Bạn muốn gửi một tệp tin nhạy cảm cho một người bạn. Bạn có thể sử dụng giải thuật mã hóa AES để encrypt tệp tin của mình với một khóa mã hóa độc đáo. Kết quả là tệp tin được mã hóa thành một dạng mã hoá và không thể đọc được bởi người khác.
 
 Khi người nhận nhận được tệp tin, họ có thể sử dụng khóa giải mã tương ứng để decrypt tệp tin và nhận được tệp tin gốc của bạn.
 
 
 # Symmetric and Asymmetric Cryptography
+## Khái niệm
 Symmetric và Asymmetric Cryptography là hai kiểu mã hóa khác nhau được sử dụng để bảo vệ thông tin.
 
-`Symmetric Cryptography` (Mã hóa đối xứng): Là kiểu mã hóa sử dụng cùng một khóa để mã hóa và giải mã dữ liệu. Vì vậy, cả hai bên phải giữ khóa mã hóa an toàn để tránh việc bị người khác tấn công.
+`Symmetric Cryptography` (Mã hóa đối xứng): Là kiểu mã hóa sử dụng cùng một khóa để mã hóa và giải mã dữ liệu. Vì vậy, cả hai bên phải giữ khóa mã hóa an toàn để tránh việc bị người khác tấn công.Đây được cho là kỹ thuật mã hóa đơn giản và được sử dụng phổ biến nhất, với một số đặc điểm nổi bật như:
 
-`Asymmetric Cryptography`(Mã hóa bất đối xứng): Là kiểu mã hóa sử dụng hai khóa khác nhau để mã hóa và giải mã dữ liệu. Một khóa được gọi là khóa công khai hoặc khóa mã hóa, còn khóa còn lại là khóa riêng hoặc khóa giải mã. Khi một người gửi thông tin đến người khác, họ sẽ sử dụng khóa công khai của người nhận để mã hóa thông tin. Nếu ai đó trộm được thông tin, họ sẽ không thể giải mã được vì chỉ có khóa riêng mới có thể giải mã thông tin.
+- Do thuật toán mã hóa đối xứng ít phức tạp hơn và có thể thực thi nhanh hơn, đây là kỹ thuật được đặc biệt ưa thích trong các hoạt động truyền tải dữ liệu hàng loạt.
+- Văn bản gốc được mã hóa bằng một key trước khi gửi đi, và chính key này cũng sẽ được người nhận sử dụng để giải mã dữ liệu.
+- Một số thuật toán mã hóa đối xứng được sử dụng phổ biến nhất bao gồm AES-128, AES-192 và AES-256.
+
+`Asymmetric Cryptography`(Mã hóa bất đối xứng): Là kiểu mã hóa sử dụng hai khóa khác nhau để mã hóa và giải mã dữ liệu. Một khóa được gọi là khóa công khai hoặc khóa mã hóa, còn khóa còn lại là khóa riêng hoặc khóa giải mã. Khi một người gửi thông tin đến người khác, họ sẽ sử dụng khóa công khai của người nhận để mã hóa thông tin. Nếu ai đó trộm được thông tin, họ sẽ không thể giải mã được vì chỉ có khóa riêng mới có thể giải mã thông tin.Đây là loại hình mã hóa ra đời sau mã hóa đối xứng và còn được gọi là công nghệ mã hóa public-key:
+
+- Mã hóa bất đối xứng được cho là an toàn hơn mã hóa đối xứng vì nó sử dụng 2 key riêng biệt cho 2 quy trình mã hóa và giải mã.
+- Public key được sử dụng để mã hóa sẽ được công khai, nhưng private key để giải mã là hoàn toàn bí mật.
+- Phương pháp mã hóa này được sử dụng trong các giao tiếp hàng ngày qua internet.
+- Khi một tin nhắn được mã hóa bằng public key, nó chỉ có thể được giải mã bằng private key. Tuy nhiên, khi một tin nhắn được mã hóa bằng private key, nó có thể được    giải mã bằng public key.
+- Chứng chỉ kỹ thuật số trong mô hình máy khách-máy chủ có thể được sử dụng để tìm thấy các public key.
+- Điểm hạn chế của mã hóa bất đối xứng là mất nhiều thời gian thực hiện hơn so với mã hóa đối xứng.
+- Các kỹ thuật mã hóa bất đối xứng phổ biến bao gồm RSA, DSA và PKCS.
 
 Ví dụ về Asymmetric Cryptography:
 
@@ -53,25 +74,66 @@ Ví dụ về Symmetric Cryptography:
 Trong một trường hợp truyền tải dữ liệu trong một mạng, hai bên sẽ thỏa thuận sử dụng một khóa chung để mã hóa và giải mã dữ liệu. Khi dữ liệu được gửi từ máy A đến máy B, nội dung sẽ được mã hóa bằng khóa chung và chỉ có máy B mới có thể giải mã được dữ liệu.
 
 # Block Cipher and Stream Cipher
-
+## Khái niệm
 `Block Cipher` và `Stream Cipher` là hai kiểu mã hóa khác nhau trong cryptography.
 
-`Block Cipher`: là một kiểu mã hóa từng block dữ liệu một cách độc lập với những block khác. Mỗi block sẽ được mã hóa bằng cùng một khóa và các block sẽ được gửi đi một cách độc lập với nhau. Kích thước block thường là 128 hoặc 256 bits.
+`Block Cipher`: Mật mã khối là một mật mã khóa đối xứng khác. Mật mã khối hoạt động trên các khối (nhóm bit) có độ dài cố định. Mật mã khối sử dụng một phép biến đổi cố định (không thay đổi) cho tất cả các chữ số trong khối. Ví dụ: khi một văn bản thuần túy khối x-bit (cùng với khóa bí mật) được cung cấp làm đầu vào cho công cụ mật mã khối, nó sẽ tạo ra khối văn bản mã x-bit tương ứng. Sự biến đổi thực sự phụ thuộc vào khóa bí mật. Tương tự, thuật toán giải mã khôi phục khối x-bit ban đầu của bản rõ bằng cách sử dụng khối x-bit của bản mã và khóa bí mật ở trên làm đầu vào. Trong trường hợp thông điệp đầu vào quá dài so với kích thước của khối, nó sẽ được chia nhỏ thành các khối và các khối này sẽ được mã hóa (riêng lẻ) bằng cùng một khóa. Tuy nhiên, vì cùng một khóa được sử dụng, mỗi chuỗi lặp lại trong văn bản thuần túy sẽ trở thành một chuỗi lặp lại giống nhau trong văn bản mã và điều này có thể gây ra các lo ngại về bảo mật. Các mật mã khối phổ biến là DES (Tiêu chuẩn mã hóa dữ liệu) và AES (Tiêu chuẩn mã hóa nâng cao).
 
-`Stream Cipher`: là một kiểu mã hóa dữ liệu từng byte một. Nó sẽ tạo ra một dòng bit để mã hóa từng byte dữ liệu. Stream Cipher thường được sử dụng trong việc truyền tải dữ liệu trong một mạng vì nó có tốc độ mã hóa và giải mã nhanh hơn Block Cipher.
+`Stream Cipher`: Mật mã dòng thuộc họ mật mã khóa đối xứng. Mật mã dòng kết hợp các bit văn bản thuần túy với một dòng bit mã hóa giả ngẫu nhiên với việc sử dụng hoạt động XOR (độc quyền hoặc). Mật mã dòng mã hóa từng chữ số văn bản thuần túy với các phép biến đổi khác nhau cho các chữ số liên tiếp. Vì mã hóa của mỗi chữ số phụ thuộc vào trạng thái hiện tại của công cụ mã hóa, mật mã dòng còn được gọi là mật mã trạng thái. Thông thường, các bit / bit đơn được sử dụng dưới dạng các chữ số đơn. Để tránh lo ngại về bảo mật, cần đảm bảo rằng cùng một trạng thái khởi động không được sử dụng nhiều hơn một lần. Mật mã dòng được sử dụng rộng rãi nhất là RC4.
 
-Ví dụ về Block Cipher:
+## Sự khác biệt giữa Mật mã dòng và Mật mã khối là gì?
+
+Mặc dù cả mật mã dòng và mật mã khối đều thuộc họ mật mã đối xứng, nhưng có một số điểm khác biệt chính. Mật mã khối mã hóa các khối bit có độ dài cố định, trong khi mật mã dòng kết hợp các bit văn bản thuần túy với một dòng bit mật mã giả ngẫu nhiên sử dụng phép toán XOR. Mặc dù mật mã khối sử dụng cùng một phép biến đổi, nhưng mật mã dòng sử dụng các phép biến đổi khác nhau dựa trên trạng thái của động cơ. Mật mã luồng thường thực thi nhanh hơn mật mã khối. Về độ phức tạp của phần cứng, mật mã dòng tương đối ít phức tạp hơn. Mật mã luồng là ưu tiên điển hình so với mật mã khối khi văn bản thuần túy có sẵn với số lượng khác nhau (ví dụ: kết nối wifi an toàn), bởi vì mật mã khối không thể hoạt động trực tiếp trên các khối ngắn hơn kích thước khối. Nhưng đôi khi, sự khác biệt giữa mật mã dòng và mật mã khối không rõ ràng lắm. Lý do là, khi sử dụng một số chế độ hoạt động, mật mã khối có thể được sử dụng để hoạt động như một mật mã dòng bằng cách cho phép nó mã hóa đơn vị dữ liệu nhỏ nhất hiện có.
+
+## Ví dụ
 
 AES (Advanced Encryption Standard) là một ví dụ của Block Cipher. Nó sử dụng một khóa để mã hóa từng block dữ liệu với kích thước block là 128 bits.
-Ví dụ về Stream Cipher:
 
 RC4 (Ron's Code 4) là một ví dụ của Stream Cipher. Nó sử dụng một khóa để tạo ra một dòng bit để mã hóa từng byte dữ liệu. RC4 thường được sử dụng trong việc truyền tải dữ liệu trong một mạng vì tốc độ mã hóa và giải mã nhanh.
 
 # Hash Function 
-
+## Khái niệm 
 `Hash Function` là một thuật toán mã hóa tính toán một giá trị băm (hash value) từ một đầu vào bất kỳ (thường là một chuỗi hoặc tập tin). Giá trị băm này là duy nhất cho mỗi đầu vào và có thể được sử dụng để xác định độ tin cậy của dữ liệu.
 
-Ví dụ, một Hash Function có thể được sử dụng để tạo ra một giá trị băm cho một password được lưu trữ trong một database. Khi người dùng nhập password để đăng nhập, Hash Function có thể được sử dụng để tạo ra giá trị băm cho password mới và so sánh nó với giá trị băm đã lưu trữ để xác định xem password có đúng hay không.
+![image](https://user-images.githubusercontent.com/83689890/217718178-2553919a-6733-4695-ba00-33e6e9f2792b.png)
+
+## Tính chất của Hash
+Hàm băm mật mã về cơ bản cần đảm bảo các tính chất sau: 
+
+- Tính tất định, nghĩa là cùng một thông điệp đầu vào luôn tạo ra cùng một hàm băm. 
+
+- Tính hiệu quả. Có khả năng tính toán nhanh chóng giá trị băm của bất kỳ thông điệp nào. 
+
+- Tính nhạy cảm. Đảm bảo rằng bất kỳ một thay đổi nào, dù là nhỏ nhất trên dữ liệu đều sẽ gây ra sự thay đổi cực lớn trên giá trị băm và tạo ra giá trị băm hoàn toàn khác, và không hề có liên hệ gì với giá trị băm cũ (hiệu ứng tuyết lở).
+
+Ngoài ra, với mục đích đảm bảo an toàn cho dữ liệu, các hàm băm mật mã phải có khả năng chịu được tất cả các loại tấn công mã hóa đã biết. Trong lý thuyết mật mã, mức độ an toàn của hàm băm mật mã đã được xác định bằng các thuộc tính sau: 
+
+- Tính kháng tiền ảnh thứ nhất. Tính chất yêu cầu rằng với một giá trị băm h bất kỳ, sẽ khó tìm thấy bất kỳ thông điệp m nào sao cho h = hash (m). Khái niệm này có liên quan đến tính chất một chiều của hàm băm. 
+
+- Tính kháng tiền ảnh thứ hai. Với đầu vào m1, sẽ khó tìm được đầu vào m2 khác sao cho hash(m1) = hash (m2). 
+
+- Tính kháng va chạm. Rất khó để tìm thấy hai thông điệp khác nhau m1 và m2 sao cho hash (m1) = hash (m2). Một giá trị như vậy được gọi là va chạm của hàm băm mật mã.
+
+## Các loại Hash
+MD5,SHA-1,RIPEMD160,Bcrypt,Whirlpool,SHA-2,SHA-3,BLAKE2,SHA-256,SHA-512
+
+## Ứng dụng của Hash
+- Hashing trong định danh tệp hoặc dữ liệu
+
+- Hashing trong xác minh tính toàn vẹn của thông điệp hoặc tập tin
+
+- Hashing trong tạo và xác nhận chữ ký
+
+- Hashing trong xác minh mật khẩu
+
+- Hashing và Bằng chứng công việc (Proof of Work)
+
+
+
+
+
+## Ví dụ 
+Một Hash Function có thể được sử dụng để tạo ra một giá trị băm cho một password được lưu trữ trong một database. Khi người dùng nhập password để đăng nhập, Hash Function có thể được sử dụng để tạo ra giá trị băm cho password mới và so sánh nó với giá trị băm đã lưu trữ để xác định xem password có đúng hay không.
 
 # basic-mod1 
 ```
