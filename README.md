@@ -196,6 +196,20 @@ Thay dấu cách thay dấu gạch dưới và để ý một chút ta sẽ th�
 
 Mã hóa đổi hoán vị từ (1,2,3)->(2,3,1) để giải ta làm ngược lại (3,1,2)
 
+```
+f = open("message.txt", "r", encoding="UTF-8")
+s = f.read()
+
+n=3
+s3 = [s[i:i+n] for i in range(0, len(s), n)]
+result = []
+
+for i in range(len(s3)):
+    result.append(s3[i][2]+s3[i][0]+s3[i][1])
+
+print(''.join(result))
+```
+
 ![image](https://user-images.githubusercontent.com/83689890/217388120-24d6931f-3891-4bc1-9c70-2e019aa954c8.png)
 
 Flag là `picoCTF{7R4N5P051N6_15_3XP3N51V3_A9AFB178}`
