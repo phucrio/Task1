@@ -1,23 +1,72 @@
 # Task 1
 
 # Cryptography
+## Khái niệm
 `Cryptography` là một kĩ thuật mã hóa thông tin để bảo vệ quyền riêng tư và tính bảo mật của dữ liệu trong quá trình truyền giao dịch hoặc lưu trữ. Nó sử dụng các giải thuật mã hóa và giải mã để chuyển đổi thông tin thông thường thành dữ liệu được mã hóa và ngược lại.
 
-VD: Bạn muốn gửi một email có nội dung bảo mật cho một người bạn. Bạn có thể sử dụng một giải thuật mã hóa để mã hóa nội dung email trước khi gửi. Chỉ người nhận có thể giải mã nội dung email bằng cách sử dụng khóa giải mã tương ứng.
+Cryptography giúp đảm bảo những tính chất sau cho thông tin:
+
+- Tính bí mật (confidentiality): thông tin chỉ được tiết lộ cho những ai được phép.
+- Tính toàn vẹn (integrity): thông tin không thể bị thay đổi mà không bị phát hiện.
+- Tính xác thực (authentication): người gửi (hoặc người nhận) có thể chứng minh đúng họ.
+- Tính không chối bỏ (non-repudiation): người gửi hoặc nhận sau này không thể chối bỏ việc đã gửi hoặc nhận thông tin.
+
+## Phân loại cryptography 
+- Mật mã khóa bí mật – SKC .Với loại thuật toán này, nó sử dụng một khóa duy nhất cho cả mã hóa và giải mã. Nó còn được gọi là mã hóa đối xứng. Thuật toán này được sử dụng cho sự riêng tư và bảo mật.
+- Mật mã khóa công khai – PKC.
+Thuật toán này dùng một khóa để mã hóa và một khóa khác để giải mã. Mật mã khóa công khai này còn được gọi là mã hóa bất đối xứng. Nó chủ yếu được sử dụng để xác thực, không thoái thác và trao đổi khóa.
+- Hàm băm .
+Còn thuật toán này sử dụng một phép biến đổi toán học thành thông tin mã hóa không thể đảo ngược được, cung cấp dấu vân tay kỹ thuật số. Hàm băm chủ yếu được sử dụng cho tin nhắn.
+
+## Tại sao phải sử dụng Cryptography?
+Trong thực tế, Cryptography được sử dụng rất rộng rãi – nhất là trong lĩnh vực công nghệ thông tin. Mục đích của việc sử dụng mã hóa – giải mã là để đảm bảo thông tin được truyền đi không bị đọc-hiểu một cách dễ dàng.
+
+Khi chúng ta sử dụng mạng internet hàng ngày; các thông tin cá nhân, thông tin trao đổi với người khác, nội dung chat, tài khoản email, facebook v.v. là các dữ liệu được truyền đi trên mạng và không có gì đảm bảo những thông tin này là an toàn không bị đọc trộm. Do đó mã hóa được áp dụng như một biện pháp bắt buộc nhằm giúp chúng ta tự bảo vệ chính mình an toàn trên internet.
+
+
+## Ví dụ
+Bạn muốn gửi một email có nội dung bảo mật cho một người bạn. Bạn có thể sử dụng một giải thuật mã hóa để mã hóa nội dung email trước khi gửi. Chỉ người nhận có thể giải mã nội dung email bằng cách sử dụng khóa giải mã tương ứng.
 
 # Cryptanalysis
+## Khái niệm
 `Cryptanalysis` là một quá trình tìm kiếm các điểm yếu trong các thuật toán mật mã và sử dụng các điểm yếu này để giải mã bản mã mà không cần biết khóa bí mật.
+
+## Phân loại cryptanalysis
+- Total break — Kẻ tấn công tìm ra khóa bí mật.
+
+- Global deduction — Kẻ tấn công tìm ra giải thuật tương đương cho sự mã hóa và giải mã nhưng không học về key.
+
+- Instance (local) deduction — kẻ tấn công tìm ra khối plaintext (hoặc ciphertext) mà không được biết trước.
+
+- Information deduction — Kẻ tấn công thu được một vài thông tin Shanon ve plaintext (hoặc ciphertext) không được biết trước.
+
+- Distinguishing algorithm — Kẻ tấn công có thể nhận biết được khối từ một sự hoán vị ngẫu nhiên.
+
+## Độ phức tạp
+Cuộc tấn công có thể được đặc trưng bới số lượng tài nguyên mà chúng đòi hỏi.
+
+- Time : số "phép tính chính" được mô tả. Cái này không chặt chẽ, phép tính chính có thể là các chỉ dẫn máy tính cơ bản như cộng, XOR, luân phiên…,hoặc hoàn toàn là các phương thức mã hóa. Such as addition, XOR, shift, and so forth, or entire encryption methods.
+
+- Memory : Sô lưu trữ đòi hỏi để mô tả tấn công the amount of storage required to perform the attack.
+
+- Data : chất lượng của plaintext và ciphertext đòi hỏi.
 
 VD: Một tổ chức tấn công bảo mật muốn truy cập thông tin bảo mật trong một hệ thống. Họ có thể sử dụng kỹ thuật cryptanalysis để phân tích và giải mã giải thuật mã hóa để truy cập thông tin bảo mật.
 
 # Encode/Decode
+## Khái niệm 
 `Encode` và `Decode` là hai quá trình liên quan đến mã hóa và giải mã dữ liệu.
 
 `Encode` là quá trình chuyển đổi dữ liệu thông thường thành dữ liệu được mã hóa sử dụng một giải thuật mã hóa để bảo vệ quyền riêng tư hoặc tính bảo mật.
 
 `Decode` là quá trình ngược lại của `encode`, nó là quá trình giải mã dữ liệu đã được mã hóa thành dữ liệu gốc hoặc thông thường. Giải mã có thể yêu cầu sử dụng khóa giải mã tương ứng để giải mã thành thông tin gốc.
 
-VD:Bạn muốn gửi một tin nhắn bảo mật cho một người bạn với nội dung là `mai di choi nhe`. Bạn có thể sử dụng giải thuật mã hóa Base64 để encode tin nhắn của mình. Kết quả là tin nhắn được mã hóa thành một chuỗi ký tự đặc biệt `bWFpIGRpIGNob2kgbmhl`.
+## Sự khác nhau giữa Mã hoá và Giải mã là gì?
+
+Mã hoá và giải mã là hai quá trình ngược lại. Mã hóa được thực hiện với mục đích tăng khả năng sử dụng dữ liệu trong các hệ thống khác nhau và để giảm khoảng trống cần thiết cho việc lưu trữ, trong khi giải mã sẽ chuyển đổi thông tin được mã hoá trở về định dạng ban đầu của nó.Mã hoá được thực hiện bằng cách sử dụng các phương pháp công khai và nó có thể dễ dàng đảo ngược (giải mã). Ví dụ, mã hóa ASCII chỉ là một bản đồ giữa các ký tự và các con số. Vì vậy, giải mã nó là thẳng về phía trước. Tuy nhiên, việc giải mã tin nhắn được gửi qua một kênh ồn sẽ không được thẳng về phía trước, bởi vì thông điệp có thể bị làm xáo trộn tiếng ồn. Trong các trường hợp như vậy giải mã bao gồm các phương pháp phức tạp được sử dụng để lọc ra ảnh hưởng của tiếng ồn trong tin nhắn.
+
+## Ví dụ
+Bạn muốn gửi một tin nhắn bảo mật cho một người bạn với nội dung là `mai di choi nhe`. Bạn có thể sử dụng giải thuật mã hóa Base64 để encode tin nhắn của mình. Kết quả là tin nhắn được mã hóa thành một chuỗi ký tự đặc biệt `bWFpIGRpIGNob2kgbmhl`.
 
 Khi người nhận nhận được tin nhắn, họ có thể sử dụng giải thuật giải mã Base64 để decode tin nhắn và nhận được tin nhắn gốc của bạn.
 Vậy, quá trình encode và decode giúp cho việc gửi và nhận tin nhắn bảo mật trở nên dễ dàng và an toàn hơn.
